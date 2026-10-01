@@ -1,0 +1,61 @@
+  /* Initial Transparent Navbar */
+  body{
+    background-color: antiquewhite !important;
+  }
+  .navbar {
+        
+    background: linear-gradient(180deg, #E82429 5.26%, #680F11 100%);
+    transition: background 0.3s ease-in-out;
+}
+.navbar a
+{
+    font-family: "Jost", Sans-serif !important;
+    color: white !important;
+font-weight: 400 !important;
+}
+/* Navbar Background Changes on Scroll */
+.navbar.scrolled {
+    background: linear-gradient(180deg, #E82429 5.26%, #680F11 100%) !important;
+}
+.navbar-nav .nav-link, .navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: white !important;
+}
+.dropdown-menu {
+    background: linear-gradient(180deg, #E82429 5.26%, #680F11 100%);
+    border: none;
+    padding: 10px;
+}
+.dropdown-item {
+    color: white !important;
+    font-weight: 500;
+    padding: 0 15px;
+}
+.dropdown-item:hover {
+    background-color: white;
+    color: #680F11 !important;
+}
+.contact-btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white !important;
+    
+    text-decoration: none;
+    font-weight: bold;
+   
+    transition: 0.5s all ease;
+    font-weight: 400;
+padding: 17px 29px 17px 29px;
+}
+.contact-btn:hover {
+    background-color: darkblue;
+    color: white !important;
+}
+/* Hover Dropdown */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    background: linear-gradient(180deg, #E82429 5.26%, #680F11 100%);
+}

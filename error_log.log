@@ -1,0 +1,6 @@
+[21-Jul-2025 14:14:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'new_gallantt.web_investorreports' doesn't exist in /home/xrejx7oy2kbf/public_html/website.gallantt.com/includes/classes/class.investorreport.php:155
+Stack trace:
+#0 /home/xrejx7oy2kbf/public_html/website.gallantt.com/includes/classes/class.investorreport.php(155): PDO->query('SELECT\n        ...')
+#1 /home/xrejx7oy2kbf/public_html/website.gallantt.com/pages/investors.php(4): InvestorReport->getGroupedReports()
+#2 {main}
+  thrown in /home/xrejx7oy2kbf/public_html/website.gallantt.com/includes/classes/class.investorreport.php on line 155

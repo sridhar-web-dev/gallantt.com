@@ -1,0 +1,34 @@
+<?php
+    $resources = $resourceObj->getAllResources();
+?>
+<div class="row">
+    <?php foreach ($resources as $res): ?>
+        <div class="col-md-6 mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title"><?= htmlspecialchars($res['resource_name']) ?></h5>
+                    <?php if ($res['file_type'] === 'doc'): ?>
+                        <p>
+                            <a href="../uploads/<?= htmlspecialchars($res['file_path']) ?>" target="_blank" class="btn btn-outline-primary">
+                                Download Document
+                            </a>
+                        </p>
+                        <?php elseif ($res['file_type'] === 'video'): ?>
+                            <?php
+                                preg_match('/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^\s&]+)/', $res['file_path'], $matches);
+                                $videoId = $matches[1] ?? '';
+                            ?>
+                        <?php if ($videoId): ?>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/<?= $videoId ?>" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        <?php else: ?>
+                            <p>Invalid YouTube link.</p>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <p class="text-muted mt-2"><small>Uploaded on <?= date('d M Y', strtotime($res['created_at'])) ?></small></p>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>

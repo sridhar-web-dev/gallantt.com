@@ -1,0 +1,3 @@
+ALTER TABLE web_users 
+ADD COLUMN login_attempts INT DEFAULT 0,
+ADD COLUMN last_attempt DATETIME DEFAULT NULL;

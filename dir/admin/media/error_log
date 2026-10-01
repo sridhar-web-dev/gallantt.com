@@ -1,0 +1,4 @@
+[05-Jul-2025 06:32:55 America/Chicago] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php83/sess_74efacf7f49fcd0b2a35c5cba768b930, O_RDWR) failed: No such file or directory (2) in /home1/allonibp/gallantt1.maverico.com/config/config.php on line 2
+[05-Jul-2025 06:32:55 America/Chicago] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php83) in /home1/allonibp/gallantt1.maverico.com/config/config.php on line 2
+[05-Jul-2025 06:33:10 America/Chicago] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/ea-php83/sess_c5f2e0eb862738f4e0dcf37313282232, O_RDWR) failed: No such file or directory (2) in /home1/allonibp/gallantt1.maverico.com/config/config.php on line 2
+[05-Jul-2025 06:33:10 America/Chicago] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/ea-php83) in /home1/allonibp/gallantt1.maverico.com/config/config.php on line 2

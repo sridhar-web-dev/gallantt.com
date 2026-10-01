@@ -1,0 +1,82 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    # Force HTTPS only on the live domain.
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?gallantt\.com$ [NC]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://gallantt.com%{REQUEST_URI} [R=301,L]
+
+    # Do not append another .php to direct PHP file requests.
+    RewriteRule \.php$ - [END]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+    # XAMPP serves this project from /gallantt.com.
+    RewriteCond %{HTTP_HOST} ^localhost(?::\d+)?$ [NC]
+    RewriteRule ^blogs/([0-9]+)/?$ /gallantt.com/pages/blogs.php?page=$1 [END,QSA]
+    RewriteRule ^blogs/desc/([0-9]+)/?$ /gallantt.com/pages/blog-view.php?blog_id=$1 [END,QSA]
+    RewriteRule ^media/([0-9]+)/?$ /gallantt.com/pages/media.php?page=$1 [END,QSA]
+    RewriteRule ^([^/]+)/?$ /gallantt.com/pages/$1.php [END,QSA]
+
+RewriteRule ^([^/]+)/?$ pages/$1.php [L,QSA]
+  
+  
+
+</IfModule>
+# BLOG VIEW - SEO URL
+# BLOG PAGINATION
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# /blogs/2/ → pages/blogs.php?page=2
+RewriteRule ^blogs/([0-9]+)/?$ pages/blogs.php?page=$1 [L,QSA]
+# /blogs/desc/5/ → pages/blog-view.php?blog_id=5
+RewriteRule ^blogs/desc/([0-9]+)/?$ pages/blog-view.php?blog_id=$1 [L,QSA]
+# MEDIA PAGINATION
+# /gallantt/media/2/ → media.php?page=2
+RewriteRule ^media/([0-9]+)/?$ pages/media.php?page=$1 [L,QSA]
+# MEDIA VIEW
+# /gallantt/media/desc/2/ → media-view.php?media_id=2
+RewriteRule ^media/desc/([0-9]+)/?$ media-view.php?media_id=$1 [L,QSA]
+
+Redirect 301 /chairman/ https://gallantt.com/
+Redirect 301 /contact/ https://gallantt.com/contact-us
+Redirect 301 /team/ https://gallantt.com/about-us
+Redirect 301 /news/ https://gallantt.com/media
+Redirect 301 /projects/ https://gallantt.com/about-us
+Redirect 301 /career/ https://gallantt.com/careers
+Redirect 301 /home-4/ https://gallantt.com/
+Redirect 301 /blog-1/ https://gallantt.com/blogs/
+Redirect 301 /group-profile/ https://gallantt.com/about-us
+# Prevent clickjacking by blocking external iframe embedding
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Content-Security-Policy "frame-ancestors 'self';"
+
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "\
+        script-src 'self' https://code.jquery.com 'unsafe-inline' 'unsafe-eval'; \
+        style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; \
+        font-src 'self' https://cdnjs.cloudflare.com data:; \
+    "
+</IfModule>
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    # HSTS is enabled only on the live HTTPS site.
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" "expr=%{HTTPS} == 'on' && req('Host') =~ m#(^|\\.)gallantt\\.com$#i"
+    # Optional: basic XSS protection
+    Header set X-XSS-Protection "1; mode=block"
+    # CSP Policy is implemented 
+    # Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests;"
+    # Banner Grabbing
+    Header unset Server
+    Header unset X-Powered-By
+    php_flag expose_php Off
+
+</IfModule>

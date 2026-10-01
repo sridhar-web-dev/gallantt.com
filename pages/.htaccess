@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# -----------------------------
+# Custom 404 (CORRECT PATH)
+# -----------------------------
+ErrorDocument 404 /pages/404.php
+# -----------------------------
+# Prevent rewrite loop inside /pages
+# -----------------------------
+RewriteCond %{REQUEST_URI} !^/pages/404\.php$
+# -----------------------------
+# SEO URLs inside /pages
+# /pages/about-us → about-us.php
+# -----------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/pages/$1.php -f
+RewriteRule ^(.+?)/?$ $1.php [L,QSA]
+# -----------------------------
+# Force 404 if file does not exist
+# -----------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* - [R=404,L]
+</IfModule>

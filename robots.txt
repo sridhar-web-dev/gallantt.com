@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /get-stock-price.php
+Disallow: /dir/
+Disallow: /assets/
+Disallow: /uploads/
+Disallow: /database/
+Disallow: /action/
+Disallow: /components/
+Disallow: /readme.md
+Disallow: /Untitled-1.css
+Disallow: /Test.php
+
+Sitemap: https://gallantt.com.com/sitemap.xml
+
+Sitemap: https://gallantt.com/sitemap.xml

@@ -1,0 +1,184 @@
+/* Mobile devices (up to 767px) */
+.elementor-3641 .elementor-element.elementor-element-fdac674:not(.elementor-motion-effects-element-type-background),
+.elementor-3641 .elementor-element.elementor-element-fdac674 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-position: center center !important;  /* or top center */
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+@media (max-width: 767px) {
+
+
+.elementor-3465 .elementor-element.elementor-element-74149bb, .elementor-2559 .elementor-element.elementor-element-b52035c, .elementor-4067 .elementor-element.elementor-element-74149bb,
+.elementor-4065 .elementor-element.elementor-element-74149bb, .elementor-4063 .elementor-element.elementor-element-74149bb, .elementor-56 .elementor-element.elementor-element-e39e33b,
+.elementor-58 .elementor-element.elementor-element-e7ded69, .elementor-62 .elementor-element.elementor-element-6581d84, .elementor-60 .elementor-element.elementor-element-5ac9e85,
+.elementor-66 .elementor-element.elementor-element-d2c55fb, .elementor-66 .elementor-element.elementor-element-d2c55fb, .elementor-4460 .elementor-element.elementor-element-46ac3ea
+{
+margin-top: 100px !important;
+}
+.job-list-section .nav-pills .nav-item {
+    margin: 15px 8px !important;
+}
+.job-list-section .nav-pills .nav-item .nav-link
+ {
+    padding: 5px 25px !important;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    color: #000;
+}
+.apply-btn {
+    background-color: #e1251b;
+    font-family: "Kumbh Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    fill: #fff;
+    color: #fff;
+    transition-duration: 1s;
+    border-radius: 50px 50px 50px 50px;
+    padding: 9px 31px 9px 31px !important;
+    border: none !important;
+}
+    .elementor-3465 .elementor-element.elementor-element-11d9ec1 .elementor-heading-title {
+        font-size: 36px !important;
+        line-height: 43px !important;
+        text-align: center;
+    }
+    .elementor-4067 .elementor-element.elementor-element-91f7f69 .elementor-heading-title {
+        font-size: 29px !important;
+        line-height: 40px !important;
+    }
+        .elementor-4067 .elementor-element.elementor-element-ac00ae8 .elementor-heading-title {
+        font-size: 33px !important;
+        line-height: 44px !important;
+    }
+    .elementor-4065 .elementor-element.elementor-element-05ea86b .elementor-heading-title {
+        font-size: 34px !important;
+        line-height: 38px !important;
+        text-align: center;
+    }
+
+       .elementor-56 .elementor-element.elementor-element-a0806c0 .elementor-heading-title {
+        font-size: 34px !important;
+        line-height: 40px !important;
+    }
+    .elementor-56 .elementor-element.elementor-element-257c9d5 img
+    {
+        height: auto !important;
+    }
+.investor-corner .nav-pills .nav-item .nav-link {
+    background-color: #F4F4F4;
+    color: #000000;
+    border-radius: 20px;
+    padding: 9px 9px !important;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin: 3px 0;
+}
+.elementor-66 .elementor-element.elementor-element-026c9e1 .elementor-heading-title {
+    font-family: "Jost", Sans-serif;
+    font-size: 23px !important;
+    font-weight: 500;
+    line-height: 32px !important;
+}
+
+.elementor-2559 .elementor-element.elementor-element-81f95d1 .elementor-divider-separator, body:not(.rtl) .elementor-2624 .elementor-element.elementor-element-b66da38, 
+body:not(.rtl) .elementor-3465 .elementor-element.elementor-element-607a9dc, body:not(.rtl) .elementor-4067 .elementor-element.elementor-element-607a9dc, body:not(.rtl) .elementor-4065 .elementor-element.elementor-element-607a9dc,
+body:not(.rtl) .elementor-4063 .elementor-element.elementor-element-607a9dc, body:not(.rtl) .elementor-56 .elementor-element.elementor-element-09f34d0,body:not(.rtl) .elementor-56 .elementor-element.elementor-element-09f34d0,
+body:not(.rtl) .elementor-58 .elementor-element.elementor-element-5760d04, body:not(.rtl) .elementor-62 .elementor-element.elementor-element-51b5116, body:not(.rtl) .elementor-60 .elementor-element.elementor-element-7122440,
+body:not(.rtl) .elementor-60 .elementor-element.elementor-element-7122440, body:not(.rtl) .elementor-66 .elementor-element.elementor-element-61495b6, body:not(.rtl) .elementor-4460 .elementor-element.elementor-element-e62fce7,
+body:not(.rtl) .elementor-4460 .elementor-element.elementor-element-e62fce7, body:not(.rtl) .elementor-4460 .elementor-element.elementor-element-e62fce7
+{
+    display: none !important;
+}
+.navbar {
+    background-color: #e32429;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+    background-color: #e32429;
+    transition: background-color 0.3s ease-in-out;
+}
+      .elementor-10 .elementor-element.elementor-element-a75db4b .elementor-counter-number-wrapper {
+        font-size: 60px !important;
+        line-height: 100px !important;
+    } 
+    body:not(.rtl) .elementor-2624 .elementor-element.elementor-element-b66da38, body:not(.rtl) .elementor-2559 .elementor-element.elementor-element-81f95d1,body:not(.rtl) .elementor-3465 .elementor-element.elementor-element-607a9dc,
+    body:not(.rtl) .elementor-4067 .elementor-element.elementor-element-607a9dc, body:not(.rtl) .elementor-4065 .elementor-element.elementor-element-607a9dc, body:not(.rtl) .elementor-4063 .elementor-element.elementor-element-607a9dc,
+    body:not(.rtl) .elementor-56 .elementor-element.elementor-element-09f34d0, body:not(.rtl) .elementor-58 .elementor-element.elementor-element-5760d04, body:not(.rtl) .elementor-62 .elementor-element.elementor-element-51b5116,
+    body:not(.rtl) .elementor-60 .elementor-element.elementor-element-7122440, body:not(.rtl) .elementor-66 .elementor-element.elementor-element-61495b6
+     {
+    right: -40% !important;
+}
+    .elementor-3465 .elementor-element.elementor-element-05ea86b .elementor-heading-title, .elementor-3465 .elementor-element.elementor-element-11d9ec1 .elementor-heading-title,.elementor-3465 .elementor-element.elementor-element-2a45c7d .elementor-heading-title,
+    .elementor-4067 .elementor-element.elementor-element-91f7f69 .elementor-heading-title, .elementor-4067 .elementor-element.elementor-element-05ea86b .elementor-heading-title,
+    .elementor-4065 .elementor-element.elementor-element-05ea86b .elementor-heading-title, .elementor-56 .elementor-element.elementor-element-a0806c0 .elementor-heading-title
+     {
+        font-size: 35px !important;
+        line-height: 45px !important;
+    }
+    .elementor-4065 .elementor-element.elementor-element-3c576d8 .elementor-heading-title
+    {
+        font-size: 69px !important;
+    }
+        .elementor-56 .elementor-element.elementor-element-b0c8737 {
+        --width: 50% !important;
+    }
+    .elementor-56 .elementor-element.elementor-element-cc67dc7 {
+        --width: 50% !important;
+    }
+.elementor-58 .elementor-element.elementor-element-82b5f8a .elementor-heading-title {
+    color: var(--e-global-color-314576f);
+    font-family: "Jost", Sans-serif;
+    font-size: 56px !important;
+    font-weight: 600;
+    line-height: 52px;
+}
+:where( .elementor-58 .elementor-element.elementor-element-029c935 > .elementor-widget-container > .e-n-accordion > .e-n-accordion-item > .e-n-accordion-item-title > .e-n-accordion-item-title-header ) > .e-n-accordion-item-title-text
+
+ {
+    font-family: "Jost", Sans-serif;
+    font-weight: 600;
+    line-height: 32px !important;
+}
+.investor-corner .nav-pills .nav-item .nav-link {
+    background-color: #F4F4F4;
+    color: #000000;
+    border-radius: 50px;
+    padding: 10px 20px !important;
+    margin-top: 5px;
+}
+.elementor-66 .elementor-element.elementor-element-026c9e1 .elementor-heading-title {
+    font-family: "Jost", Sans-serif;
+    font-size: 27px !important;
+    font-weight: 500;
+    line-height: 38px !important;
+}
+
+}
+
+/* Desktops (1024px and up) */
+@media (min-width: 1024px) {
+  /* Your desktop styles here */
+}

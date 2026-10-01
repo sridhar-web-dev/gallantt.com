@@ -1,0 +1,39 @@
+RewriteEngine On
+RewriteBase /gallantt/
+
+RewriteEngine On
+
+# Redirect sitemap.xml to sitemap.php
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+
+# --------------------------
+# BLOG VIEW - SEO URL
+# /gallantt/blogs/desc/5/ → pages/blog-view.php?blog_id=5
+RewriteRule ^blogs/desc/([0-9]+)/?$ pages/blog-view.php?blog_id=$1 [L,QSA]
+
+# BLOG PAGINATION
+# /gallantt/blogs/2/ → blogs.php?page=2
+RewriteRule ^blogs/([0-9]+)/?$ pages/blogs.php?page=$1 [L,QSA]
+
+# MEDIA PAGINATION
+# /gallantt/media/2/ → media.php?page=2
+RewriteRule ^media/([0-9]+)/?$ pages/media.php?page=$1 [L,QSA]
+
+# MEDIA VIEW
+# /gallantt/media/desc/2/ → media-view.php?media_id=2
+RewriteRule ^media/desc/([0-9]+)/?$ media-view.php?media_id=$1 [L,QSA]
+
+# SEO-FRIENDLY .php REMOVAL FOR PAGES (optional)
+# /gallantt/about-us → /gallantt/pages/about-us.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+?)/?$ /gallantt.com/pages/$1.php [L,QSA]
+
+# FALLBACK - ONLY if file exists without .php (optional)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+
+

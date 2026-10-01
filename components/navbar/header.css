@@ -1,0 +1,79 @@
+  /* Initial Transparent Navbar */
+  .fixed-top {
+    position: relative;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+  .navbar {
+        
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+.navbar a
+{
+    font-family: "Jost", Sans-serif !important;
+font-weight: 400 !important;
+}
+/* Navbar Background Changes on Scroll */
+.navbar.scrolled {
+    background-color: red !important;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-nav .nav-link, .navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-nav .nav-link:hover {
+    color: #ddd !important;
+}
+.dropdown-menu {
+    background-color: red;
+    border: none;
+    padding: 10px;
+}
+.dropdown-item {
+    color: white !important;
+    font-weight: 500;
+}
+.dropdown-item:hover {
+    background-color: darkred;
+}
+.contact-btn {
+    background-color: blue;
+    color: white;
+    
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(180deg, #0066A4 0%, #0063A0 34%, #025C95 66%, #044E82 97%, #044D80 100%);
+    transition: 0.5s all ease;
+    font-weight: 400;
+fill: #fff;
+color: #fff;
+border-radius: 100px 100px 100px 100px;
+padding: 17px 29px 17px 29px;
+}
+.contact-btn:hover {
+    background-color: darkblue;
+}
+/* Hover Dropdown */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+@media(min-width: 768px)
+{
+    .fixed-top {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
